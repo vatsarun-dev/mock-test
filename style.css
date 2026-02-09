@@ -1,0 +1,245 @@
+@font-face{
+    src:url("../kodex/surgena-personal-use-only/Surgena\ Personal\ use\ only.ttf");
+    font-family:"sugar";
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* BLURRED BACKGROUND LAYER */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("https://thumbs.dreamstime.com/b/vector-landscape-blue-silhouettes-mountains-hills-forest-sky-clouds-birds-vector-landscape-blue-140798289.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: blur(8px);
+  transform: scale(1.05); /* prevents blur edges */
+  z-index: -1;
+}
+
+
+.front{
+    height:100%;
+    width:100%;
+    /* background-color: #f5f5ff; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form1{
+    height: 400px;
+    width: 350px;
+    background-color: #1f7c72;
+    position: absolute;
+    left: 47%;
+    top: 23%;
+    border-radius: 20px;
+    z-index: 2;
+ --mask:
+    radial-gradient(50.4px at 70.5px 50%,#000 99%,#0000 101%) 0 calc(50% - 60px)/100% 120px,
+    radial-gradient(50.4px at -40.5px 50%,#0000 99%,#000 101%) 30px 50%/100% 120px repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);}
+@media (max-width:900px){
+    .form1{
+    height: 400px;
+    width: 350px;
+    background-color: #1f7c72;
+    position: absolute;
+    left: 44%;
+    top: 22.5%;
+    border-radius: 20px;
+    z-index: 2;
+}
+}
+
+.form2{
+    padding: 20px 0px;
+      align-items: center;
+      padding-left:50px;
+      padding-right:20px;
+
+}
+.btn1{
+    margin-top:20px;
+    width:100%;
+    height:50px;
+    border-radius:20px;
+    border:none;
+    font-weight: 600;
+    transition: all ease 0.4s;
+    transition-delay: 0.1ms;
+    background-color: #1f7c72;
+    color:white;
+    border:1px solid white;
+    position:relative;
+    overflow: hidden;
+    z-index:1;
+}
+.btn1::after{
+    content:'';
+    height:50px;
+    width:100%;
+    border-radius:50%;
+    background-color: white;
+    color:#1f7c72;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%) scale(0);
+    z-index: -1;
+}
+
+.btn1:hover::after{
+    transform: translate(-50%,-50%) scale(2.5);
+}
+.btn1:hover{
+    color:#1f7c72;
+}
+#in1{
+    height:45px;
+    width:100%;
+    border-radius: 25px;
+    border:1px solid white;
+    text-align: left;
+    padding-left:10px;
+    margin:4px;
+    background: transparent;
+    color:white;
+        margin-top: 10px;
+    margin-bottom: 10px;
+}
+#in2{
+    height:45px;
+    width:100%;
+    border-radius: 25px;
+    border:none;
+    text-align: left;
+    padding-left:10px;
+    margin:4px;
+    background: transparent;
+    color:white;
+    border:1px solid white;
+        margin-top: 10px;
+    margin-bottom: 10px;
+}
+#in3{
+    height:45px;
+    width:100%;
+    border-radius: 25px;
+    border:none;
+    text-align: left;
+    padding-left:10px;
+    margin:4px;
+    background: transparent;
+    color:white;
+    border:1px solid white;
+        margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.back{
+    height:50px;
+    width:400px;
+    z-index: 1;
+}
+.back img{
+    height:400px;
+    width:600px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    border-radius:20px;
+    /* filter:blur(1px); */
+    
+}
+.nav{
+    height:100px;
+    width:100%;
+    background-color:#1f7c72;
+    display:flex;
+    padding:0px 20px;
+    
+}
+.nav .nav-list{
+    display:flex;
+    gap:32px;
+    align-items: center;
+    margin-left:20px;
+    color:white;
+    font-family: "sugar";
+}
+.nav a{
+    text-decoration: none;
+    color:white;
+    font-weight: 700;
+}
+.nav ul{
+    list-style: none;
+}
+span{
+    display:flex;
+    gap:50px;
+    
+}
+.d1{
+    display:flex;
+    gap:30px;
+    font-size:large;
+    font-weight:800;
+    position: absolute;
+    left: 85%;
+    
+}
+@media(max-width:800px){
+    .d1{
+    display:flex;
+    gap:30px;
+    font-size:large;
+    font-weight:800;
+    position: absolute;
+    left: 80%;
+    
+}
+.img1{
+    height:700px;
+    width:100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    position:sticky;
+    z-index: -1;
+}
+}
+.nav .nav-list h1,a{
+    font-family:'sugar';
+}
+.img1{
+    height:700px;
+    width:100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    position:sticky;
+    z-index:-1;
+}

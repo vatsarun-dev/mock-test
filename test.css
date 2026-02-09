@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* BLURRED BACKGROUND LAYER */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("https://thumbs.dreamstime.com/b/vector-landscape-blue-silhouettes-mountains-hills-forest-sky-clouds-birds-vector-landscape-blue-140798289.jpg");
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(8px);
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+
+
+.nav {
+  height: 100px;
+  width: 100%;
+  background-color: #1f7c72;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 32px;
+  list-style: none;
+}
+
+.d1 {
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+  font-size: large;
+  font-weight: 800;
+}
+
+.nav .nav-list h1,
+.nav .nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.img1{
+    height:700px;
+    width:100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    position:sticky;
+    z-index:-1;
+}
+
+.main {
+  position: relative;     /* ROOT */
+  height: 400px;
+  width: 50%;
+  margin: 100px auto;
+  background-color: #1f7c72;
+}
+
+.wave {
+  position: relative;
+  top:20%;
+  height: 80%;
+  width: 100%;
+  background-color: white;
+    /* filter:blur(2px); */
+
+
+
+  z-index: 2;
+}
+.box {
+    height:80px;
+    width:80%;
+    background-color: #1f7c72;
+    position:absolute;
+    left:10%;
+    top:10%;
+    z-index:3;
+    border-radius:20px;
+    border:1px solid white;
+}
+#box1{
+    height:40px;
+    width:40%;
+    background-color:#1f7c72;
+    position:absolute;
+    left:10%;
+    top:50%;
+    z-index:4;
+    color:white;
+    text-align: center;
+}
+#box2{
+    height:40px;
+    width:40%;
+    background-color:#1f7c72;
+    position:absolute;
+    left:55%;
+    top:50%;
+    z-index:4;
+    color:white;
+    text-align: center;
+}
+#box3{
+    height:40px;
+    width:40%;
+    background-color:#1f7c72;
+    position:absolute;
+    left:10%;
+    top:70%;
+    z-index:4;
+    color:white;
+    text-align: center;
+}
+#box4{
+    height:40px;
+    width:40%;
+    background-color:#1f7c72;
+    position:absolute;
+    left:55%;
+    top:70%;
+    z-index:4;
+    color:white;
+    text-align: center;
+}
+
+.bx{
+    border-radius:20px;
+    font-size: large;
+    font-weight: 800;
+}
+#btn-1{
+    height:40px;
+    width:140px;
+    position:absolute;
+    z-index:4;
+    border-radius:10px;
+    margin-top:20px;
+    margin-left:40px;
+    left:15%;
+    transition: all ease 0.4s;
+    transition-delay: 0.1ms;
+    background-color: #1f7c72;
+    color:white;
+    overflow: hidden;
+    font-weight: 800;
+}
+#btn-2{
+    height:40px;
+    width:140px;
+    position:absolute;
+    z-index:4;
+    border-radius:10px;
+    margin-top:20px;
+    margin-left:40px;
+    left:60%;
+    transition: all ease 0.4s;
+    transition-delay: 0.1ms;
+    background-color: #1f7c72;
+    color:white;
+    overflow: hidden;
+    font-weight: 800;
+}
+
+@media(max-width:930px){
+    #btn-1{
+    height:40px;
+    width:140px;
+    position:absolute;
+    z-index:4;
+    border-radius:10px;
+    margin-top:20px;
+    left:2%;
+}
+#btn-2{
+    height:40px;
+    width:140px;
+    position:absolute;
+    z-index:4;
+    border-radius:10px;
+    margin-top:20px;
+    margin-left:40px;
+    left:45%;
+}
+}
+#question{
+    color:white;
+    text-align: center;
+    padding:10px 10px;
+}
+.bx {
+  padding: 16px;
+  border: 2px solid #ccc;
+  margin: 12px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  background: white;
+  transition: all 0.25s ease;
+}
+
+.bx:hover {
+  border-color: #1f7c72;
+}
+
+.bx.active {
+  background-color: #1f7c72;
+  color: white;
+  border-color: #1f7c72;
+  transform: scale(1.02);
+}
+
+#btn-1::after{
+    content:'';
+    height:50px;
+    width:100%;
+    border-radius:50%;
+    background-color: white;
+    color:#1f7c72;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%) scale(0);
+    z-index: -1;
+}
+
+#btn-1:hover::after{
+    transform: translate(-50%,-50%) scale(2.5);
+}
+#btn-1:hover{
+    color:#1f7c72;
+}
+
+#btn-2::after{
+    content:'';
+    height:50px;
+    width:100%;
+    border-radius:50%;
+    background-color: white;
+    color:#1f7c72;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%) scale(0);
+    z-index: -1;
+}
+
+#btn-2:hover::after{
+    transform: translate(-50%,-50%) scale(2.5);
+}
+#btn-2:hover{
+    color:#1f7c72;
+}
